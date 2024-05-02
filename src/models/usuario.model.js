@@ -7,15 +7,15 @@ const schema = mongoose.Schema;
 //Ahora nos creamos nuestro esquema de datos que es lo que vamos a guardar en nuestra base de datos 
 
 const usuarioSchema = new schema({
-    nombreCompleto:{
+    nombre:{
         type: String,
         required: true
     },
-    correo:{
+    email:{
         type: String,
         required: true
     },
-    contrasena:{
+    password:{
         type: String,
         required: true
 

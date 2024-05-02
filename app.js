@@ -15,6 +15,12 @@ dotenv.config();
 //2.2 configurar conexion base de datos
 conexionMongo(); 
 
+//2.3// Configura CORS para permitir solicitudes específicamente desde el origen de tu frontend
+import cors from 'cors';
+app.use(cors({
+    origin: 'http://127.0.0.1:5501'
+}));
+
 // 3.ESTABLECER LA CONEXIÓN CON NUESTRO FRONT 
 
 const rutaPublica = path.join(process.cwd(), 'public');
@@ -33,3 +39,5 @@ app.get('/', (req, res) => {
 app.listen( puerto, () => {
     console.log(`El servidor está escuchando en http://localhost:${puerto}`);
 });
+
+

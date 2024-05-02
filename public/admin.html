@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Administrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header class="bg-dark py-3 text-white text-center">
+        <h1>Gestión de Usuarios</h1>
+    </header>
+
+    <main class="container mt-5">
+        <h2>Usuarios Registrados</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre Completo</th>
+                    <th scope="col">Correo Electrónico</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="miTabla">
+                <!-- Los usuarios se cargarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Sobre Paula Rodríguez:</h5>
+                    <p style="text-align: justify;">Soy Paula Rodríguez, terapeuta holística y mentora de bienestar, comprometida con el crecimiento personal y el desarrollo espiritual de cada individuo. A través de "VIBRANDO EN GRATITUD", mi misión es inspirar a otros a encontrar la paz interior y el equilibrio, comenzando su transformación desde el alma hacia el exterior.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes Sociales</h5>
+                    <a href="https://web.facebook.com/psicologia.mente" target="_blank" style="color: white;"><i class="fab fa-facebook-square"></i> Facebook</a><br>
+                    <a href="https://twitter.com/psicologiamente" target="_blank" style="color: white;"><i class="fab fa-twitter-square"></i> Twitter</a><br>
+                    <a href="https://www.instagram.com/VibrandoEnGratitud" target="_blank" style="color: white;"><i class="fab fa-instagram-square"></i> Instagram</a>
+                    <h5>Otras Formas de Contacto</h5>
+                    <p>Correo Electrónico: <a href="mailto:correo@vibrandoengratitud.com" style="color: white;">correo@vibrandoengratitud.com</a></p>
+                    <p>Teléfono: <a href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información." target="_blank" style="color: white;">Enviar mensaje de WhatsApp</a></p>
+                    <p>(Horario de atención: Lunes a Viernes de 9:00 a 18:00)</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces de Interés</h5>
+                    <p>Explora más sobre terapia holística y bienestar a través de estos recursos seleccionados especialmente para ti:</p>
+                    <p><a href="https://psicologiaymente.com/neurociencias/meditacion-cambios-cerebro" target="_blank" style="color: white;">Cómo la Meditación Cambia el Cerebro</a></p>
+                    <p><a href="https://www.saludterapia.com/articulos/a/3265-beneficios-psicoterapia-holistica.html" target="_blank" style="color: white;">Beneficios de la Terapia Holística en la Vida Cotidiana</a></p>
+                    <p><a href="https://desarrollopersonalmente.com/cultiva-la-gratitud-en-tu-vida-diaria-mejores-practicas" target="_blank" style="color: white;">Prácticas Diarias para Cultivar la Gratitud</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const usuarios = [
+                
+            ];
+
+            const tabla = document.getElementById("miTabla");
+            usuarios.forEach(usuario => {
+                const fila = document.createElement("tr");
+                fila.innerHTML = `
+                    <td>${usuario.nombreCompleto || usuario.nombre}</td>
+                    <td>${usuario.correo || usuario.email}</td>
+                    <td><button class="btn btn-danger">Eliminar</button></td>
+                `;
+                tabla.appendChild(fila);
+            });
+        });
+    </script>
+</body>
+</html>
