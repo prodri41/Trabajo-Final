@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - VIBRANDO EN GRATITUD</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f0f2f5; /* Un color de fondo suave */
+    }
+    .container {
+      background-color: #ffffff; /* Fondo blanco para el contenedor */
+      padding: 20px; /* Espaciado interno */
+      border-radius: 8px; /* Bordes redondeados */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      max-width: 400px; /* Ancho máximo para un mejor enfoque */
+      margin: 40px auto; /* Centrar el contenedor en la página y añadir espacio arriba y abajo */
+    }
+    h2 {
+      color: #343a40; /* Color oscuro para el título, similar al footer del index.html */
+      margin-bottom: 20px; /* Espaciado debajo del título */
+    }
+    .form-control {
+      border-radius: 5px; /* Bordes redondeados para los campos de entrada */
+      margin-bottom: 15px; /* Espaciado entre campos */
+    }
+    button.btn {
+      border-radius: 5px; /* Bordes redondeados para el botón */
+      width: 100%; /* Hacer que el botón ocupe todo el ancho del contenedor */
+      padding: 10px; /* Aumentar el padding para un botón más grande */
+      background-color: #007bff; /* Color primario de Bootstrap para el botón */
+      color: white; /* Texto blanco para el botón */
+    }
+    button.btn:hover {
+      background-color: #0056b3; /* Oscurecer el botón al pasar el mouse */
+    }
+  </style>
+  <!-- Link de mi archivo JavaScript -->
+  <script src="./scripts/registro.js" defer></script>
+  <!-- Inclusión de jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="text-center">
+      <img src="imagenes/Logo.jpg" alt="Logo" width="100" class="mb-4">
+      <h2>Registro</h2>
+    </div>
+    <form id="formulario-registro">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" 
+            placeholder="Ingresa tu nombre">
+        </div>
+        <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico:</label>
+            <input type="email" class="form-control" id="correo" 
+             placeholder="Crea un correo">
+        </div>
+        <div class="mb-3">
+            <label for="contrasena" class="form-label">Contraseña:</label>
+            <input type="password" class="form-control" id="contrasena"
+             placeholder="Crea una contraseña">
+        </div>
+        <button type="button" class="btn btn-primary" 
+        onclick="registrarUsuario()">Registrar</button>
+
+    </form>
+  </div>
+</body>
+</html>
