@@ -1,4 +1,3 @@
-
 // Verificar conexión con .html
 console.log("Conexión exitosa con admin.html");
 
@@ -15,8 +14,8 @@ const mostrarUsuarios = async () => {
     }
 }
 
+// Función para alterar las filas de la tabla en .html
 
-// Esta es la función para alterar las filas de la tabla en .html
 function mostrarTabla(usuarios) {
     const tabla = document.getElementById("miTabla");
     tabla.innerHTML = '';
