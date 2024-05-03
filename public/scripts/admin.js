@@ -14,7 +14,7 @@ const mostrarUsuarios = async () => {
     }
 }
 
-// Función para alterar las filas de la tabla en .html
+// Esta Función para alterar las filas de la tabla en .html
 
 function mostrarTabla(usuarios) {
     const tabla = document.getElementById("miTabla");

@@ -15,7 +15,7 @@ const iniciar = async (event) => {
 
         console.log(usuarios);
 
-        // 3. Verificar si se encontró un usuario con el correo y la contraseña proporcionados
+        // 3. ESta Verificar si se encontró un usuario con el correo y la contraseña proporcionados
         const esUsuarioRegistrado = usuarios.find(usuario => usuario.email === email && usuario.password === password);
 
         console.log(esUsuarioRegistrado);
