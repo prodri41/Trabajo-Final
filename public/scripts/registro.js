@@ -11,7 +11,7 @@ const registrarUsuario = async () => {
     console.log(nombre, email, password);
 
 
-//2.2 Aqui crear un objeto con los datos del usuario 
+//2.2 crear un objeto con los datos del usuario 
 const datosUsuario = {
 nombre,
 email,
